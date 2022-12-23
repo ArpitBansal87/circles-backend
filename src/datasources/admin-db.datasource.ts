@@ -1,6 +1,6 @@
 import {LifeCycleObserver, inject, lifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
-import * as applicationConfig from '../etc/secrets/application.json';
+import * as applicationConfig from '../application.json';
 
 
 // Observe application's life cycle to disconnect the datasource when

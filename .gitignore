@@ -65,3 +65,4 @@ typings/
 src/conf/application.json
 src/datasources/admin-db.datasource.config.json
 src/etc/secrets/application.json
+src/application.json
