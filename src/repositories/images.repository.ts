@@ -1,6 +1,6 @@
 import {inject} from '@loopback/core';
 import {DefaultCrudRepository} from '@loopback/repository';
-import {AdminDbDataSource} from '../datasources';
+import {AdminDbDataSource} from '../datasources/admin-db.datasource';
 import {Images, ImagesRelations} from '../models';
 
 export class ImagesRepository extends DefaultCrudRepository<
