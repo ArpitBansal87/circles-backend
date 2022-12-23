@@ -63,3 +63,4 @@ typings/
 # Cache used by TypeScript's incremental build
 *.tsbuildinfo
 src/conf/application.json
+src/datasources/admin-db.datasource.config.json
