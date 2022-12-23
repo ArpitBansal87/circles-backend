@@ -1,4 +1,4 @@
-import * as applicationConfig from '../conf/application.json';
+import * as applicationConfig from '../etc/secrets/application.json';
 import {DatabaseConfigs} from './DatabseConfigs';
 
 export class Configuration {

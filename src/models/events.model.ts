@@ -49,10 +49,10 @@ export class Events extends Entity {
   })
   maxAttendCount: number;
 
-  @property({
-    type: 'geopoint',
-  })
-  location?: string;
+  // @property({
+  //   type: 'geopoint',
+  // })
+  // location?: string;
 
 
   constructor(data?: Partial<Events>) {
