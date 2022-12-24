@@ -11,12 +11,13 @@ import {
   RestExplorerComponent
 } from '@loopback/rest-explorer';
 import {ServiceMixin} from '@loopback/service-proxy';
+import * as dotenv from 'dotenv';
 import path from 'path';
 import {AdminDbDataSource} from './datasources';
 import {MySequence} from './sequence';
 
+dotenv.config();
 export {ApplicationConfig};
-
 export class VoterAppBackendApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
@@ -45,6 +46,17 @@ export class VoterAppBackendApplication extends BootMixin(
         nested: true,
       },
     };
+    this.bind('datasources.config.adminDb').to({
+      "name": process.env.ADMIN_DB_NAME,
+      "connector": "mongodb",
+      "url": process.env.MONGO_DB_ADMIN_URL,
+      "host": "",
+      "port": 0,
+      "user": "",
+      "password": "",
+      "database": process.env.DATABASE_NAME,
+      "useNewUrlParser": true
+    });
     // Mount authentication system
     this.component(AuthenticationComponent);
     // Mount jwt component
