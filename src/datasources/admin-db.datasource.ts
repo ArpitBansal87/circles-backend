@@ -14,6 +14,7 @@ export class AdminDbDataSource extends juggler.DataSource
     @inject('datasources.config.adminDb', {optional: true})
     dsConfig: Object,
   ) {
+    console.log('inside the db details =>', dsConfig)
     super(dsConfig);
   }
 }
